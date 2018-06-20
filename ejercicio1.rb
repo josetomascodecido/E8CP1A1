@@ -53,4 +53,4 @@ def cuatro(s1, s2, s3, s4)
   end
 end
 cuatro(s1, s2, s3, s4)
-puts 
+puts cuatro(s1, s2, s3, s4)
