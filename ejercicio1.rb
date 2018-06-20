@@ -20,10 +20,14 @@ s3 = ["hola", "esta", "es", "mi", "prueba"]
 two_string(s1, s2)
 
 def tres_string(s1, s2, s3)
-  File.open('index.html', 'w') { |file|
+  File.open('index.html', 'w') do |file|
     file.puts "<p>#{s1}"
     file.puts "<p>#{s2}"
-    s3.each{|x|file.puts "<ol>#{x}</ol>"}
-  }
+    file.puts "<ol>"
+    if ! s3.empty?
+    s3.each{|x|file.puts "<li>#{x}</li>"}
+    end
+    file.puts "</ol>"
+  end
 end
 tres_string(s1, s2, s3)
